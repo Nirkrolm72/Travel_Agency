@@ -9,35 +9,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <title>Travel Agency</title>
+    <title>Travel Agency</title>
 </head>
 
 <body>
-    <nav class="jus-space-between align-itm-center">
+    <!-- <nav class="jus-space-between align-itm-center">
         <h1>Travel Agency<span class="orange">.</span></h1>
-        
-        <!-- Ajouter un menu de navigation de type hamburger-->
-        
-        <ul>
-            <li>
-                <a href="#">Accueil</a>
-            </li>
-            <li>
-                <a href="#">Voyages</a>
-            </li>
-            <li>
-                <a href="#">Circuits</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
 
-            <a href="#">
-                <i class="fa-solid fa-bars menu-burger"></i>
-            </a>
+        <!-Ajouter un menu de navigation de type hamburger-->
+    <!--<ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Voyages</a></li>
+            <li><a href="#">Circuits</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>-->
+    <!--</nav>-->
+
+    <section class="top-nav">
+        <div>
+            <h1>Travel Agency<span class="orange">.</span></h1>
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Voyages</a></li>
+            <li><a href="#">Circuits</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
-
-    </nav>
+    </section>
 
     <div class="img">
         <img src="img/main.jpg" alt="travel picture">
@@ -112,12 +114,12 @@
 
             <div class="w100 size">
                 <label for="mail">Sujet&nbsp;:</label>
-                <input  class="w100" type="email">
+                <input class="w100" type="email">
             </div>
 
             <div class="w100 size">
                 <label for="msg">Message :</label>
-                <textarea id="textarea" class="w100" ></textarea>
+                <textarea id="textarea" class="w100"></textarea>
             </div>
 
 
