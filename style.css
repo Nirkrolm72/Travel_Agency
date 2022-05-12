@@ -72,21 +72,18 @@
 
 /********** Fin Flex **********/
 
-nav {
-    height: 7vh;
+
+
+.orange {
+    color: var(--orange);
 }
 
-.menu-burger{
-    font-size: 20px;
-    cursor: pointer;
+/*nav {
+    height: 7vh;
 }
 
 nav h1 {
     margin-left: 50px;
-}
-
-.orange {
-    color: var(--orange);
 }
 
 nav ul {
@@ -108,7 +105,91 @@ ul li a {
 
 ul li a:hover {
     color: var(--orange);
+}*/
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    /* background: linear-gradient(to left, #f46b45, #eea849); */
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* color: #FFF; */
+    height: 50px;
+    padding: 1em;
 }
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--black);
+    padding-right: 30px;
+}
+
+.menu>li {
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: var(--black);
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
 
 /********** Fin Navbar **********/
 
@@ -386,7 +467,7 @@ footer {
 
 /********** Responsive **********/
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
 
     nav ul {
         display: none;
@@ -396,12 +477,57 @@ footer {
         margin-left: 10px;
     }
 
-    .menu-burger{
-        display: block;
+    .menu-button-container {
+        display: flex;
     }
 
-    img{
+    .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-toggle~.menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked~.menu li {
+        /* border: 1px solid #333; */
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .menu{
+        background-color: var(--white);
+    }
+
+    .menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: var(--white);
+        background-color: var(--white);
+    }
+
+    .menu>li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+
+    img {
         height: 500px;
+        z-index: -1;
     }
 
     #title1 h1 {
@@ -420,8 +546,8 @@ footer {
         display: flex;
         flex-direction: row;
         overflow-x: hidden;
-        
-        
+
+
     }
 
     #possibilities article {
@@ -429,22 +555,23 @@ footer {
         height: 270px;
     }
 
-    article{
+    article {
         margin-bottom: 30px;
     }
-    .form .row{
+
+    .form .row {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .switch{
+    .switch {
         display: flex;
         flex-direction: column;
     }
 
-    input[type="text"]{
+    input[type="text"] {
         width: 100%;
     }
 
@@ -456,3 +583,7 @@ footer {
         font-size: 15px;
     }
 }
+
+/* 
+rgregdsdgfgdfgdfggg
+ */
