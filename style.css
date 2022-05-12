@@ -38,6 +38,8 @@
     width: 100%
 }
 
+
+
 /********** Fin Global **********/
 
 
@@ -70,16 +72,21 @@
 
 /********** Fin Flex **********/
 
+nav {
+    height: 7vh;
+}
+
+.menu-burger{
+    font-size: 20px;
+    cursor: pointer;
+}
+
 nav h1 {
     margin-left: 50px;
 }
 
 .orange {
     color: var(--orange);
-}
-
-nav {
-    height: 7vh;
 }
 
 nav ul {
@@ -389,6 +396,10 @@ footer {
         margin-left: 10px;
     }
 
+    .menu-burger{
+        display: block;
+    }
+
     img{
         height: 500px;
     }
@@ -408,8 +419,19 @@ footer {
     #possibilities {
         display: flex;
         flex-direction: row;
+        overflow-x: hidden;
+        
+        
     }
 
+    #possibilities article {
+        width: 350px;
+        height: 270px;
+    }
+
+    article{
+        margin-bottom: 30px;
+    }
     .form .row{
         display: flex;
         flex-direction: column;
@@ -417,11 +439,14 @@ footer {
         justify-content: center;
     }
 
-    .overlay {
-        opacity: 0.8;
+    .switch{
+        display: flex;
+        flex-direction: column;
     }
 
-
+    input[type="text"]{
+        width: 100%;
+    }
 
     footer {
         align-items: center;
